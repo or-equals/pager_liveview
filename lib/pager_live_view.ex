@@ -24,7 +24,7 @@ defmodule PagerLiveView do
   end
 
   def pagination_route(conn, route, action, param) do
-    &route.(conn, action, param, page: &1)
+    &route.(conn, action, Map.merge(param, %{page: &1}))
   end
 
   def pagination_links(conn, results, route, action, param \\ nil) do
