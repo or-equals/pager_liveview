@@ -25,7 +25,7 @@ defmodule PagerLiveView.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:phoenix_live_view, ">= 0.15.0"},
+      {:phoenix_live_view, ">= 0.16.0"},
       {:phoenix_html, "~> 3.0"},
       {:jason, "~> 1.0"},
       {:ex_doc, ">= 0.0.0", only: :dev, runtime: false}

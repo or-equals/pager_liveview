@@ -3,6 +3,6 @@ defmodule PagerLiveViewTest do
   doctest PagerLiveView
 
   test "greets the world" do
-    assert {:safe, _ } = PagerLiveView.pagination_text(%{first: "first", last: "last", count: "count"})
+    assert %Phoenix.LiveView.Rendered{static: _static} = PagerLiveView.pagination_text(%{first: "first", last: "last", count: "count"})
   end
 end
