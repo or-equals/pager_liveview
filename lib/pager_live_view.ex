@@ -2,8 +2,8 @@ defmodule PagerLiveView do
   @moduledoc """
     Documentation for `PagerLiveView`.
   """
-  import Phoenix.LiveView.Helpers, only: [live_redirect: 2]
   import Phoenix.Component, only: [sigil_H: 2]
+  import Phoenix.HTML.Link, only: [link: 2]
 
   def pagination_text(assigns) do
     ~H"""
