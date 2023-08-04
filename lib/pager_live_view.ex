@@ -46,10 +46,10 @@ defmodule PagerLiveView do
   end
 
   defp previous_link(route, assigns) do
-    link("Previous", to:route.(@prev_page), class: "relative inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50")
+    link("Previous", to: route.(@prev_page), class: "relative inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50")
   end
 
   defp next_link(route, assigns) do
-    link("Next", to:route.(@next_page), class: "ml-3 relative inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50")
+    link("Next", to: route.(@next_page), class: "ml-3 relative inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50")
   end
 end
