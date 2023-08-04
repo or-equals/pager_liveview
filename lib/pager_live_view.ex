@@ -2,7 +2,8 @@ defmodule PagerLiveView do
   @moduledoc """
     Documentation for `PagerLiveView`.
   """
-  import Phoenix.Component, only: [sigil_H: 2]
+  import Phoenix.LiveView.Helpers
+  import Phoenix.Component
   import Phoenix.HTML.Link, only: [link: 2]
 
   def pagination_text(assigns) do
@@ -45,11 +46,11 @@ defmodule PagerLiveView do
     ]
   end
 
-  defp previous_link(route, assigns) do
-    link("Previous", to: route.(@prev_page), class: "relative inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50")
+  defp previous_link(route, results) do
+    link("Previous", to: route.(results.prev_page), class: "relative inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50")
   end
 
-  defp next_link(route, assigns) do
-    link("Next", to: route.(@next_page), class: "ml-3 relative inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50")
+  defp next_link(route, results) do
+    link("Next", to: route.(results.next_page), class: "ml-3 relative inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50")
   end
 end
