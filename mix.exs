@@ -7,7 +7,7 @@ defmodule PagerLiveView.MixProject do
       name: "Pager LiveView",
       description: "LiveView Template Helpers to use in conjunction with the Pager library and TailwindCSS",
       source_url: "https://github.com/or-equals/pager_liveview",
-      version: "0.6.0",
+      version: "0.7.0",
       elixir: ">= 1.11.0",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
